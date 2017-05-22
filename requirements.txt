@@ -2,7 +2,7 @@ appdirs==1.4.3
 arrow==0.10.0
 binaryornot==0.4.3
 chardet==3.0.3
--e git+https://git.heroku.com/warm-sierra-15707.git@328937e9a71e29862283bdb76f55436dc914088e#egg=cifar_10
+-e .
 click==6.7
 cloudinary==1.8.0
 cookiecutter==1.5.1
