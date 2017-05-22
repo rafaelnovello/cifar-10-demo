@@ -2,7 +2,66 @@
 
 {% block content %}
 <div class="content">
-  <h1><span class="font-semi-bold">Pyramid</span> <span class="smaller">Starter project</span></h1>
-  <p class="lead">Welcome to <span class="font-normal">cifar-10</span>, a&nbsp;Pyramid application generated&nbsp;by<br><span class="font-normal">Cookiecutter</span>.</p>
+    <div class="row text-center">
+      <h1>Cifar-10</h1>
+      <p>Use o campo abaixo para informar a URL de uma imagem em uma das categorias abaixo e veja se a Rede Neural consegue acertar o que é esta imagem!</p>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-4 col-md-2">
+            <ul>
+                <li>Avião</li>
+                <li>Automóvel</li>
+                <li>Passaro</li>
+                <li>Gato</li>
+                <li>Cervo</li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <ul>
+                <li>Cão</li>
+                <li>Sapo</li>
+                <li>Cavalo</li>
+                <li>Barco</li>
+                <li>Caminhão</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="row text-center">
+        <div class="col-xs-offset-3 col-md-7">
+            <form method="post" action="" enctype="multipart/form-data">
+                <div class="input-group input-group-lg">
+                    <input class="form-control" placeholder="URL" type="url" name="url" required="required" size=60>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Enviar</button>
+                    </span>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="row">
+        {% if ori_img_url %}
+        <div class="col-xs-offset-2 col-md-2">
+            <img class="mg-top-20" src="{{ori_img_url}}" height=110>
+        </div>
+        <div class="col-md-1">
+            <img class="mg-top-50" src="{{process_img_url}}" width=64>
+        </div>
+        <div class="col-md-2">
+            <img class="mg-top-20" src="static/matriz.jpg" width=128>
+        </div>
+        <div class="col-md-2">
+            <img class="mg-top-20" src="static/rede-neural.png" width=120>
+        </div>
+        {% endif %}
+        <div class="col-md-1">
+            <p class="predict-label">{{prediction}}</p>
+        </div>
+    </div>
+    <br>
+    <div class="row text-center">
+      <p>Quer saber como isto funciona? Veja o <a href="https://github.com/rafaelnovello/cifar-10-demo" target="_blank">repositório do projeto</a></p>
+    </div>
 </div>
 {% endblock content %}

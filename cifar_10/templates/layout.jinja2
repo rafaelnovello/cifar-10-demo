@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="pyramid web application">
     <meta name="author" content="Pylons Project">
-    <link rel="shortcut icon" href="{{request.static_url('cifar_10:static/pyramid-16x16.png')}}">
 
-    <title>Cookiecutter Starter project for the Pyramid Web Framework</title>
+    <title>Cifar-10 demo with Pyramid Web Framework</title>
 
     <!-- Bootstrap core CSS -->
     <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
@@ -28,23 +27,14 @@
     <div class="starter-template">
       <div class="container">
         <div class="row">
-          <div class="col-md-2">
-            <img class="logo img-responsive" src="{{request.static_url('cifar_10:static/pyramid.png') }}" alt="pyramid web framework">
-          </div>
-          <div class="col-md-10">
+          <div class="col-md-12">
             {% block content %}
                 <p>No content</p>
             {% endblock content %}
           </div>
         </div>
         <div class="row">
-          <div class="links">
-            <ul>
-              <li><i class="glyphicon glyphicon-cog icon-muted"></i><a href="https://github.com/Pylons/pyramid">Github Project</a></li>
-              <li><i class="glyphicon glyphicon-globe icon-muted"></i><a href="https://webchat.freenode.net/?channels=pyramid">IRC Channel</a></li>
-              <li><i class="glyphicon glyphicon-home icon-muted"></i><a href="http://pylonsproject.org">Pylons Project</a></li>
-            </ul>
-          </div>
+
         </div>
         <div class="row">
           <div class="copyright">
