@@ -1,0 +1,3 @@
+[run]
+source = cifar_10
+omit = cifar_10/test*
