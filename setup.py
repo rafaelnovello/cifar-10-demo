@@ -23,7 +23,7 @@ tests_require = [
 
 setup(
     name='cifar_10',
-    version='0.0',
+    version='0.1',
     description='cifar-10',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
@@ -32,9 +32,9 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
     ],
-    author='',
-    author_email='',
-    url='',
+    author='Rafael Novello',
+    author_email='rafa.reis.novello@gmail.com',
+    url='https://pyramid-cifar-10.herokuapp.com/',
     keywords='web pyramid pylons',
     packages=find_packages(),
     include_package_data=True,
