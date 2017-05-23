@@ -1,8 +1,8 @@
-cifar-10
-========
+# Pyramid Cifar-10
 
-Getting Started
----------------
+## [Online Demo](https://pyramid-cifar-10.herokuapp.com/)
+
+## How to Install
 
 - Change directory into your newly created project.
 
