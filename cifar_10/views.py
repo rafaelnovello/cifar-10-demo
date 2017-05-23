@@ -46,6 +46,7 @@ def my_view(request):
 def load_image(url):
     resp = requests.get(url)
     img = Image.open(BytesIO(resp.content))
+    img = img.convert('RGB')
     img = img.resize((32, 32))
     return img
 
