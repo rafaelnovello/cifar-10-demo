@@ -1,29 +1,46 @@
 # Pyramid Cifar-10
 
-## [Online Demo](https://pyramid-cifar-10.herokuapp.com/)
+Pyramid Cifar-10 é uma demo web para demonstrar como uma rede neural convolucional (CNN) pode categorizar imagens através de um modelo previamente treinado. Cifar-10 é o dataset usado no treinamento da rede e consiste em 60 mil imagens separadas em 10 categorias.
 
-## How to Install
+# Instalação
 
-- Change directory into your newly created project.
+Consideramos que a instalação será feita em um "virtualenv"
 
-    cd cifar_10
+1. Clone o repositório;
 
-- Create a Python virtual environment.
+2. Faça a instalação das dependencias:
 
-    python3 -m venv env
+(env)$ pip install -r requirements.txt
 
-- Upgrade packaging tools.
+# Ambiente de desenvolvimento
 
-    env/bin/pip install --upgrade pip setuptools
+Para executar o servidor local:
 
-- Install the project in editable mode with its testing requirements.
+(env)$ pserve development.ini
 
-    env/bin/pip install -e ".[testing]"
+Por padrão o servidor local espera conexões na porta 6543
 
-- Run your project's tests.
+# Deploy em produção
 
-    env/bin/pytest
+O projeto já inclui os arquivos necessários para o deploy no Heroku. Estes arquivos são:
 
-- Run your project.
+- Procfile
+- run (bash)
+- runapp.py
+- production-template.ini
 
-    env/bin/pserve development.ini
+Este modelo de deploy *não é o ideal*, mas é uma forma simples de colocar o projeto em produção. Considere usar uma estratégia de deployment mais apropriada como o uso de nginx/gunicorn.
+
+Para fazer o deploy:
+
+- Altere o arquivo production-template.ini para production.ini
+- Se quiser manter um registro das consultas feitas no sistema, habilite o uso do Cloudinary:
+-- Faça o cadastro no Cloudinary
+-- Insira suas credenciais no arquivo production.ini
+-- Remova os comentários
+
+O sistema automaticamente salvará as imagens e suas predições no Cloudinary se as credenciais estiverem presentes.
+
+# Contribuições
+
+Todas as contribuições são bem vindas! Não deixe de compartilhar dúvidas, sugestões, criticas e etc!
