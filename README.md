@@ -31,18 +31,21 @@ O projeto já inclui os arquivos necessários para o deploy no Heroku. Estes arq
 - Procfile
 - run (bash)
 - runapp.py
-- production-template.ini
+- production.ini
 
 Este modelo de deploy **não é o ideal**, mas é uma forma simples de colocar o projeto em produção. Considere usar uma estratégia de deployment mais apropriada como o uso de nginx/gunicorn.
 
-Para fazer o deploy:
+Para fazer o deploy (heroku):
 
-- Altere o arquivo production-template.ini para production.ini
 - Se quiser manter um registro das consultas feitas no sistema, habilite o uso do Cloudinary:
   - Faça o cadastro no Cloudinary
-  - Insira suas credenciais no arquivo production.ini
-  - Remova os comentários
-
+  - Insira suas credenciais no arquivo .env do heroku ([saiba mais](https://devcenter.heroku.com/articles/heroku-local#copy-heroku-config-vars-to-your-local-env-file))
+  - altere o parametro `use_cloudinary` no arquivo production.ini
+- Faça o deploy com o comando ([saiba mais](https://devcenter.heroku.com/articles/git)):
+```
+(env)$ git push heroku master
+```
+ 
 O sistema automaticamente salvará as imagens e suas predições no Cloudinary se as credenciais estiverem presentes.
 
 # Contribuições
