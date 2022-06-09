@@ -5,7 +5,7 @@ chardet==3.0.3
 -e .
 click==6.7
 cloudinary==1.8.0
-cookiecutter==1.5.1
+cookiecutter==2.1.1
 funcsigs==1.0.2
 future==0.16.0
 hupper==1.0
