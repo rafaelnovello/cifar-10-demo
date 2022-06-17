@@ -14,7 +14,7 @@ jinja2-time==0.2.0
 Mako==1.0.6
 MarkupSafe==1.0
 mock==2.0.0
-numpy==1.12.1
+numpy==1.21.0
 olefile==0.44
 packaging==16.8
 PasteDeploy==1.5.2
