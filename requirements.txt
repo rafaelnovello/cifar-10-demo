@@ -21,7 +21,7 @@ PasteDeploy==1.5.2
 pbr==3.0.1
 Pillow==4.1.1
 poyo==0.4.1
-protobuf==3.3.0
+protobuf==3.18.3
 Pygments==2.2.0
 pyparsing==2.2.0
 pyramid==1.8.3
